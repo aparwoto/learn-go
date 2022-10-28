@@ -57,4 +57,37 @@ func main() {
 	fmt.Println(copyCar1[:])
 	fmt.Println(copyCar2[:])
 
+	months := [12]string{
+		"Januari",
+		"Februari",
+		"Maret",
+		"April",
+		"Mei",
+		"Juni",
+		"Juli",
+		"Agustus",
+		"September",
+		"Oktober",
+		"November",
+		"Desember",
+	}
+	fmt.Println("-------------------------------------------------------")
+	fmt.Println(months)
+
+	var slice1 = months[3:7]
+	var slice2 = make([]string, 4, len(months))
+	copy(slice2, months[3:7])
+
+	fmt.Println(slice1)
+	fmt.Printf("len: %d\n", len(slice1))
+	fmt.Printf("cap: %d\n", cap(slice1))
+
+	//it will also change the value of the original array
+	slice1[0] = "USOP"
+	slice2[0] = "YASOP"
+
+	fmt.Println(slice1)
+	fmt.Println(slice2)
+	fmt.Println(months)
+
 }
