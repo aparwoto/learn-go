@@ -15,7 +15,7 @@ func (t *Node) insertLeft(data int) {
 }
 
 func (t *Node) insertRight(data int) {
-	t.right = &Node{data, nil, nil}
+	t.right = &Node{data: data} // another way to initialize struct both left and right will set automatically into nil
 }
 
 func printPreOrder(root *Node) {
